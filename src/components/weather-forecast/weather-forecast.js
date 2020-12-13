@@ -29,7 +29,7 @@ export function WeatherForecast() {
   }
 
   function getTemperatureDisplay(temperature){
-    return kToC(temperature).toFixed(1)
+    return kToC(temperature).toFixed(0)
   }
 
   useEffect(() => {
