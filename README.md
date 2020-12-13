@@ -53,6 +53,7 @@ Builds the app for production to the `build` folder.<br />
 - Theming and styling;
 - Support Delete/Update/Filter todos;
 - Unit tests and tests' code coverage;
+- Security : Get rid of the API key of weather endpoint from code
 - Support gesture on mobile;
 - Support Add todo on mobile;
 - User login/authentication;
