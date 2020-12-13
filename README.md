@@ -1,8 +1,9 @@
 # Todo App
 
-<img src="./screenshots/mobile.png" style="height:500px"/>
 <img src="./screenshots/desktop.png" style="height:500px"/>
-<img src="./screenshots/add-todo-modal.png" style="height:200px"/>
+<img src="./screenshots/add-todo-modal.png" style="height:150px"/>
+<img src="./screenshots/mobile.png" style="height:300px"/>
+
 
 ## Features
 - Use Flex layout to implement responsive for mobile and desktop,;
