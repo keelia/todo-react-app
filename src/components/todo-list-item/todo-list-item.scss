@@ -1,0 +1,81 @@
+@import "../../assets/styles/variables";
+.todo-list-item{
+  display: flex;
+  flex-direction: row;
+  margin:10px;
+  position: relative;
+  &.entertainment {
+    .todo-time{
+      background-color:$success;
+    }
+  }
+  &.work {
+    .todo-time{
+      background-color:$primary;
+    }
+  }
+  &.love {
+    .todo-time{
+      background-color: $warning;
+    }
+  }
+  &.life {
+    .todo-time{
+      background-color:$primary;
+    }
+  }
+  .todo-time{
+    border-radius: 20px;
+    width: 60px;
+    color: white;
+    background-color:$normal;
+  }
+  .todo-content{
+    margin-left: 1rem;
+  }
+  &::after{
+    position: absolute;
+    top:25px;
+    left: 30px;
+    content: "";
+    height: 25px;
+    width: 1px;
+    border: 1px solid white;
+    border-width: 1px;
+    border-color: white;
+    display: inline-block;
+  }
+}
+
+@media (min-width: 576px) { 
+  .todo-list-item{
+    display: flex;
+    flex-direction: row;
+    margin:10px;
+    position: relative;
+    .todo-content{
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .todo-list-item{
+    display: flex;
+    flex-direction: row;
+    margin:10px;
+    align-items: flex-start;
+    font-size: 12px;
+    .todo-content{
+      margin-left: 1rem;
+      text-align: left;
+    }
+    &::after{
+      top:15px;
+      left: 25px;
+      height: 20px;
+      border-color:$primary;
+    }
+  }
+
+}

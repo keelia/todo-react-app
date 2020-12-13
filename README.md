@@ -1,16 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Todo App
+
+<img src="./screenshots/mobile.png" style="height:500px"/>
+<img src="./screenshots/desktop.png" style="height:500px"/>
+<img src="./screenshots/add-todo-modal.png" style="height:200px"/>
+
+## Features
+- Use Flex layout to implement responsive for mobile and desktop,;
+- Use Scss for styling;
+- Use React-Calendar for calendar, React-Bootstrap for modals and forms, React-Icons for icons;
+- Use Redux store to state management;
+- Use Axios to handle HTTP requests;
+- Use json-server to server a mock API;
+- Mock API offers:
+  - GET Todo list
+  - GET Todo status list : Todo/Completed/Postponed/Undone
+  - GET Todo category list : Work/Love/Other/Entertainment/Life
+  - POST todo
+  - PUT todo
+  - Delete todo
+- Integrate with [https://openweathermap.org/](https://openweathermap.org/) API to display current weather on your location;
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+### `npm run dev`
+
+Runs the app in the development mode <b style="color:green;">with</b> mock API.<br />
+Open [http://localhost:4200](http://localhost:4200) to view it in the browser.<br />
+The app will consume the mock API at [http://localhost:3000](http://localhost:3000)<br />
+
+
+
 ### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in the development mode <b style="color:red;">without</b> mock API.<br />
+Open [http://localhost:4200](http://localhost:4200) to view it in the browser.
 
 The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+You will also see any lint errors in the console.<br />
 
 ### `npm test`
 
@@ -37,32 +65,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

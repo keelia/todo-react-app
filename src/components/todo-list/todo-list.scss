@@ -1,0 +1,115 @@
+@import "../../assets/styles/variables";
+.todo-overview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid lightgray;
+  flex-wrap: wrap;
+  ul{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    li{
+      flex-grow: 1;
+      position: relative;
+      .task-cat{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .task-cat-name{
+          text-transform: capitalize;
+        }
+        .task-cat-num{
+          font-size: 3rem;
+        }
+      }
+      &.completed{
+        color:$success;
+      }
+      &.postponed{
+        color:$warning;
+      }
+      &.undone{
+        color: $alert;
+      }
+      &.todo{
+        color: $primary;
+      }
+      &.all{
+        color:$normal;
+      }
+    }
+    li:not(:last-child)::after{
+      position: absolute;
+      top:30px;
+      content: "";
+      height: 5px;
+      width: 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  }
+  
+  #addTodoIcon{
+    font-size: 2.5rem;
+    color:$success;
+    cursor: pointer;
+  }
+  #addTodoBtn{
+    background-color:$success;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 140px;
+    margin: 10px 0;
+  }
+}
+
+@media (min-width: 576px) { 
+  .todo-overview {
+    padding: 20px;
+    ul{
+      flex-basis: 80%;
+    }
+    
+    .add-todo{
+      flex-basis: 20%;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .todo-overview {
+    border-top-width: 0;
+    ul{
+      li{
+        .task-cat{
+          align-items: center;
+          .task-cat-name{
+            font-size: .8rem;
+          }
+          .task-cat-num{
+            font-size: 1rem;
+          }
+        }
+      }
+      li:not(:last-child)::after{
+        display: none;
+      }
+    }
+    
+    #addTodoIcon{
+      font-size: 2rem;
+      color:$success;
+      cursor: pointer;
+    }
+  }
+
+}
+
+

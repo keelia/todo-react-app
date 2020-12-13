@@ -1,0 +1,140 @@
+{
+  "todos": [
+    {
+      "id": 0,
+      "category": "life",
+      "date": "12/12/2020",
+      "desciprion": "go with the dog for a walk",
+      "status": "todo",
+      "time": "09:00"
+    },
+    {
+      "id": 1,
+      "category": "life",
+      "date": "12/12/2020",
+      "desciprion": "Gym",
+      "status": "undone",
+      "time": "13:00"
+    },
+    {
+      "id": 2,
+      "category": "work",
+      "date": "12/12/2020",
+      "desciprion": "Design An app",
+      "status": "postponed",
+      "time": "18:00"
+    },
+    {
+      "id": 3,
+      "category": "work",
+      "date": "12/12/2020",
+      "desciprion": "Design An app 2",
+      "status": "undone",
+      "time": "21:00"
+    },
+    {
+      "id": 4,
+      "category": "entertainment",
+      "date": "12/12/2020",
+      "desciprion": "go with the dog for a walk",
+      "status": "todo",
+      "time": "22:00"
+    },
+    {
+      "id": 6,
+      "category": "love",
+      "status": "postponed",
+      "desciprion": "Jacky teach",
+      "date": "11/12/2020",
+      "time": "16:00"
+    },
+    {
+      "id": 7,
+      "category": "work",
+      "status": "todo",
+      "desciprion": "Meeting",
+      "date": "11/12/2020",
+      "time": "10:00"
+    },
+    {
+      "id": 8,
+      "category": "entertainment",
+      "status": "undone",
+      "desciprion": "reset Meeting",
+      "date": "18/11/2020",
+      "time": "12:00"
+    },
+    {
+      "id": 9,
+      "category": "entertainment",
+      "status": "completed",
+      "desciprion": "reset Meeting",
+      "date": "11/12/2020",
+      "time": "12:00"
+    },
+    {
+      "id": 10,
+      "category": "entertainment",
+      "status": "postponed",
+      "desciprion": "reset Meeting",
+      "date": "11/12/2020",
+      "time": "12:00"
+    },
+    {
+      "id": 11,
+      "category": "love",
+      "status": "undone",
+      "desciprion": "jahsdkshdklsdhad",
+      "date": "13/12/2020",
+      "time": "00:00"
+    },
+    {
+      "id": 12,
+      "category": "entertainment",
+      "status": "postponed",
+      "desciprion": "sadasdsdas",
+      "date": "27/12/2020",
+      "time": "00:00"
+    }
+  ],
+  "todoCategoryList": [
+    {
+      "categoryId": "cat0",
+      "category": "work"
+    },
+    {
+      "categoryId": "cat1",
+      "category": "love"
+    },
+    {
+      "categoryId": "cat2",
+      "category": "other"
+    },
+    {
+      "categoryId": "cat3",
+      "category": "entertainment"
+    },
+    {
+      "categoryId": "cat4",
+      "category": "life"
+    }
+  ],
+  "todoStatusList": [
+    {
+      "statusId": "status0",
+      "status": "completed"
+    },
+    {
+      "statusId": "status1",
+      "status": "postponed"
+    },
+    {
+      "statusId": "status2",
+      "status": "undone"
+    },
+    {
+      "statusId": "status3",
+      "status": "todo"
+    }
+  ]
+}
