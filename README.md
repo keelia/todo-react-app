@@ -50,3 +50,15 @@ Launches the test runner in the interactive watch mode.<br />
 
 Builds the app for production to the `build` folder.<br />
 
+## Something Can Be Optimazed
+
+- Resonsive across more different screen sizes, platforms and orientations;
+- Theming and styling;
+- Support Delete/Update/Filter todos;
+- Unit tests and tests' code coverage;
+- Support gesture on mobile;
+- Support Add todo on mobile;
+- User login/authentication;
+- User data persistence;
+
+
