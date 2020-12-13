@@ -1,9 +1,6 @@
 # Todo App
 
 <img src="./screenshots/desktop.png" style="height:500px"/>
-<img src="./screenshots/add-todo-modal.png" style="height:150px"/>
-<img src="./screenshots/mobile.png" style="height:300px"/>
-
 
 ## Features
 - Use Flex layout to implement responsive for mobile and desktop;
@@ -60,5 +57,11 @@ Builds the app for production to the `build` folder.<br />
 - Support Add todo on mobile;
 - User login/authentication;
 - User data persistence;
+
+## Desktop Add Todo Screenshot
+<img src="./screenshots/add-todo-modal.png" style="height:150px"/>
+
+## Mobile Screenshot
+<img src="./screenshots/mobile.png" style="height:300px"/>
 
 
