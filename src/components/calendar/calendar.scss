@@ -4,6 +4,7 @@
   display: flex;
   align-items: stretch;
   justify-content: stretch;
+  width: 100%;
   .react-calendar { 
     border-width: 0;
     width: 100%;
@@ -58,12 +59,8 @@
 
 @media (min-width: 576px) { 
   .calendar {
-    display: flex;
-    align-items: stretch;
-    justify-content: stretch;
     .react-calendar { 
       border-width: 0;
-      width: 100%;
       .react-calendar__navigation {
         height: 100px;
         background-color: #e6e4e4;

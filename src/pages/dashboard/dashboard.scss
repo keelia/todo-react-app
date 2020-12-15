@@ -1,118 +1,41 @@
-.daily-weather{
-  background: #4e54c8;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #4e54c8 , #8f94fb);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #4e54c8,#8f94fb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: white;
+.dashboard {
+      padding-top: 70px;
+      .row{
+        align-items: center;
+      }
 }
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-  .dashboard{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding-top: 70px;
-    height: 100vh;
-  } 
-  .daily-weather{
-    padding: 20px;
-    order: 0;
-    flex-grow: 1;
-    .weather-forecast{
-      height: 30%;
-    }
-  }
-  .daily-tasks{
-    order: 1;
-    background: #4e54c8;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top,#4e54c8,#8f94fb,  );  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top,#4e54c8,#8f94fb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: white;
-    flex-grow: 1;
-  }
-  .tasks-calendar{
-    order: 2;
-    padding: 0;
-    flex-grow: 1;
-  }
-  .tasks-overview{
-    order: 3;
-    flex-grow: 1;
-    .todo-list{
-     min-height: 30%;
-    }
-  }
-}
-
-
 @media (max-width: 575.98px) { 
   .dashboard{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .daily-weather{
-    order: 0;
-    display: none;
-  }
-  .daily-tasks{
-    order: 3;
-    margin-top: 10px;
-    border-top: 2px solid lightgray;
-    flex-basis: 100%;
-  }
-  .tasks-calendar{
-    order: 2;
-    .calendar{
-      height: 70%;
+    padding-top: 0px;
+    .daily-tasks{
+      border-top:1px solid #efefef;
     }
-  }
-  .tasks-overview{
-    order: 1;
-    background-color: rgb(241, 237, 237);
-    padding-top: 10px;
-    padding-bottom: 10px;
-    flex-basis: 100%;
-    .todo-list{
-     min-height: 30%;
+    .row{
+      &:first-of-type{
+        background-color: #efefef;
+      }
     }
   }
  }
-
- @media (min-width: 1681px) { 
+ @media (max-width: 991.98px) {
   .dashboard{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding-top: 70px;
+    .daily-tasks{
+      border-top:1px solid #efefef;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .dashboard{
     height: 100vh;
-  } 
-  .daily-weather{
-    padding: 20px;
-    order: 0;
-    flex-basis: 30%;
-    .weather-forecast{
-      height: 30%;
+    .row{
+      &:first-of-type{
+       .daily{
+          background: #4e54c8;  /* fallback for old browsers */
+          background: -webkit-linear-gradient(to bottom, #4e54c8 , #8f94fb);  /* Chrome 10-25, Safari 5.1-6 */
+          background: linear-gradient(to bottom, #4e54c8,#8f94fb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+          color: white;
+       }
+      }
     }
   }
-  .daily-tasks{
-    order: 1;
-    background: #4e54c8;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top,#4e54c8,#8f94fb,  );  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top,#4e54c8,#8f94fb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: white;
-    flex-basis: 70%;
-  }
-  .tasks-calendar{
-    order: 2;
-    padding: 0;
-    flex-basis: 70%;
-  }
-  .tasks-overview{
-    order: 3;
-    flex-basis: 30%;
-    .todo-list{
-     min-height: 30%;
-    }
-  }
- }
+}

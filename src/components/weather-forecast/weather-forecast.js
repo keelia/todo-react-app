@@ -8,6 +8,7 @@ import windy from "../../assets/icons/windy.svg";
 import { getWeatherAsync, selectWeather } from './weather-forecast.reducer';
 import { useDispatch } from 'react-redux';
 import { kToC } from '../../lib/temperatureConverter';
+import MediaQuery from 'react-responsive';
 
 export function WeatherForecast() {
 
@@ -50,18 +51,30 @@ export function WeatherForecast() {
     { getTemperatureDisplay(weather.temperature) }°C
   </div>
   }else{
-    content = <p>Loading...</p>
+    content = <div className="temperature">
+    Loading...
+  </div>
   }
 
   return (
     <div className="weather-forecast">
-      <div className="weather-icon">
-        <img src={getWeatherIcon(weather.shortDes)} alt={sunny}/>
-      </div>
-      { content }
-      { hasTemperatureData && <div  className="short-description">
-        {weather.shortDes}
-      </div> }
+        <MediaQuery minDeviceWidth={992}>
+          <div className="weather-icon">
+            <img src={getWeatherIcon(weather.shortDes)} alt={sunny}/>
+          </div>
+        { content }
+        { hasTemperatureData && 
+            <div  className="short-description">
+              {weather.shortDes}
+            </div> }
+        </MediaQuery> 
+        <MediaQuery maxDeviceWidth={991.98}>
+          <div className="weather-icon">
+            <img src={getWeatherIcon(weather.shortDes)} alt={sunny}/>
+          </div>
+        { content }
+        </MediaQuery> 
     </div>
+    
   );
 }

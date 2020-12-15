@@ -1,21 +1,19 @@
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { 
+@media (min-width: 992px) { 
   .weather-icon{
-    font-size: 45px;
     img{
       width: 15vw;
-      height: 15vh;
+      height: auto;
     }
   }
-
   .temperature {
-    font-size: 45px;
+    font-size: 2rem;
+  }
+  .short-description{
+    font-size: 1rem;
   }
 }
 
-
- // X-Small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   .weather-forecast{
     display: flex;
     flex-direction: row;
@@ -31,5 +29,4 @@
       display: none;
     }
   }
-
 }

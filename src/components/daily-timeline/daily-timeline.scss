@@ -25,9 +25,10 @@
   }
 }
 
-@media (min-width: 576px) { 
+@media (min-width: 992px) { 
   .daily-timeline{
     text-transform: capitalize;
+    margin-top: 3rem;
     .see-more{
       display: flex;
       flex-direction: row;
@@ -54,8 +55,7 @@
     }
   
     .today-info, .no-todos{
-      text-align: left;
-      padding-left: calc(90px + 1rem);
+      text-align: center;
       .day{
         font-size: 2rem;
       }
@@ -64,7 +64,7 @@
 }
 
 
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   .daily-timeline{
     text-transform: capitalize;
     .see-more{
