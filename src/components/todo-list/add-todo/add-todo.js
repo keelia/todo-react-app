@@ -1,33 +1,31 @@
 import React, { useState ,useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTodoAsync, selectTodoStatusList,selectTodoCategoryList} from '../todos.reducer';
-import { selectCalendarDate} from '../../calendar/calendar.reducer';
 import './add-todo.scss';
 import { Modal,Button,Form } from 'react-bootstrap';
 import DateTimePicker from 'react-datetime-picker';
-import { getDateObjFromDateStr } from '../../../lib/dateFormater';
 
 export function AddTodoModal(props) {
   const todoCategoryList = useSelector(selectTodoCategoryList);
   const todoStatusList =  useSelector(selectTodoStatusList);
-  const calendarActivatedDate = useSelector(selectCalendarDate);
   const dispatch = useDispatch();
   const [todo, setTodo] = useState({
     id:null,
     category:'work',
     status:'todo',
     desciprion:'',
-    date:props.tododate,
-    time:'00:00'
+    datetime:props.tododate,
   });
   useEffect(() => {
-    if(calendarActivatedDate!== todo.date){
-      setTodo({...todo,date:calendarActivatedDate})
-    }
-  },[calendarActivatedDate,todo]);
+    setTodo(t=>({...t,datetime:props.tododate}))
+  },[props]);
 
   function onDateTimeChange(dateTime){
-    setTodo({...todo,date:dateTime.toLocaleDateString(),time:dateTime.toLocaleTimeString().match(/(\d+:\d+)/)[0]})
+    if(dateTime){
+      setTodo({...todo,datetime:dateTime.getTime()})
+    }else{
+      setTodo({...todo,datetime:props.tododate})
+    }
   }
 
   function onSubmit(e){
@@ -37,8 +35,7 @@ export function AddTodoModal(props) {
       category:'work',
       status:'todo',
       desciprion:'',
-      date:props.tododate,
-      time:'00:00'
+      datetime:props.tododate,
     })
     props.onHide()
   }
@@ -69,7 +66,7 @@ export function AddTodoModal(props) {
         <Form>
           <Form.Group controlId="addTodoForm.ControlInput1">
             <Form.Label>Due Date</Form.Label>
-            <DateTimePicker onChange={onDateTimeChange} value={getDateObjFromDateStr(todo.date)} />
+            <DateTimePicker onChange={onDateTimeChange} value={new Date(todo.datetime)} />
           </Form.Group>
           <Form.Group controlId="addTodoForm.ControlSelect1">
             <Form.Label>Category</Form.Label>

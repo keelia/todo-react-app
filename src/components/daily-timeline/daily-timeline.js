@@ -5,27 +5,22 @@ import'./daily-timeline.scss';
 import {IoArrowDownCircleOutline,IoArrowUpCircleOutline  } from 'react-icons/io5';
 import {GiNightSleep} from "react-icons/gi";
 import { selectTodos } from '../todo-list/todos.reducer';
-import { getDayNameFromDateObj, getMonthNameFromDateObj,getDateObjFromDateStr } from '../../lib/dateFormater';
+import { getDayNameFromDateObj, getMonthNameFromDateObj } from '../../lib/dateFormater';
 import { TodoListItem } from '../todo-list-item/todo-list-item';
 
 export function DailyTimeline() {
   const allTodos = useSelector(selectTodos);
   const selectedDate = useSelector(selectCalendarDate);
   const MaxDisplayTaskNum = 4
-  let selectedDateObj = getDateObjFromDateStr(selectedDate)
+  let selectedDateObj = new Date(selectedDate)
   const dailyTasks = allTodos.filter(todo=>{
-    let todoDate = getDateObjFromDateStr(todo.date)
+    let todoDate = new Date(todo.datetime)
     todoDate.setHours(0,0,0,0)
     selectedDateObj.setHours(0,0,0,0)
     return todoDate.getTime() === selectedDateObj.getTime()
   })
   //sort daily tasks by time
-  dailyTasks.sort((a,b)=>{
-    const aD = new Date(),bD= new Date()
-    aD.setHours(a.time.split(':')[0],a.time.split(':')[1])
-    bD.setHours(b.time.split(':')[0],b.time.split(':')[1])
-    return aD.getTime() - bD.getTime()
-  })
+  dailyTasks.sort((a,b)=>(a.datetime - b.datetime))
 
   const hiddenTasksNum = dailyTasks.length - MaxDisplayTaskNum
   const noTask = dailyTasks.length === 0

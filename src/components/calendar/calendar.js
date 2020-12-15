@@ -5,7 +5,6 @@ import './calendar.scss';
 import {Calendar as ReactCalendar} from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { selectTodos } from '../todo-list/todos.reducer';
-import { getDateObjFromDateStr } from '../../lib/dateFormater';
 
 export function Calendar() {
   const todos = useSelector(selectTodos);
@@ -14,7 +13,7 @@ export function Calendar() {
   const tileClassName=  ({ date, view }) => {
     //check if has task
     const hasTodo = todos.some(todo=>{
-      let d1 = getDateObjFromDateStr(todo.date)
+      let d1 = new Date(todo.datetime)
       d1.setHours(0,0,0,0)
       return d1.getTime() === date.getTime()
     })
@@ -24,7 +23,7 @@ export function Calendar() {
     if(cls){
       //check todo status
       const matchedTodos = todos.filter(todo=>{
-        let d1 = getDateObjFromDateStr(todo.date)
+        let d1 = new Date(todo.datetime)
         d1.setHours(0,0,0,0)
         return d1.getTime() === date.getTime()
       })
@@ -39,7 +38,7 @@ export function Calendar() {
 
   function onChange(selectedDate){
     setActivatedDate(selectedDate)
-    dispatch(setSelectedDate(selectedDate.toLocaleDateString()))
+    dispatch(setSelectedDate(selectedDate.getTime()))
   }
 
   return (

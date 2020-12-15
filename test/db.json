@@ -3,42 +3,37 @@
     {
       "id": 0,
       "category": "life",
-      "date": "13/12/2020",
+      "datetime": 1607631780000,
       "desciprion": "go with the dog for a walk",
-      "status": "todo",
-      "time": "09:00"
+      "status": "todo"
     },
     {
       "id": 1,
       "category": "love",
-      "date": "13/12/2020",
+      "datetime": 1608027780000,
       "desciprion": "Gym",
-      "status": "undone",
-      "time": "13:00"
+      "status": "undone"
     },
     {
       "id": 2,
       "category": "work",
-      "date": "13/12/2020",
+      "datetime": 1607977800000,
       "desciprion": "Design An app",
-      "status": "postponed",
-      "time": "18:00"
+      "status": "postponed"
     },
     {
       "id": 3,
       "category": "entertainment",
-      "date": "13/12/2020",
+      "datetime": 1607983620000,
       "desciprion": "Design An app 2",
-      "status": "undone",
-      "time": "21:00"
+      "status": "undone"
     },
     {
       "id": 4,
       "category": "entertainmotherent",
-      "date": "13/12/2020",
+      "datetime": 1607998309781,
       "desciprion": "go with the dog for a walk",
-      "status": "todo",
-      "time": "22:00"
+      "status": "todo"
     }
   ],
   "todoCategoryList": [

@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const calendarSlice = createSlice({
   name: 'calendar',
   initialState: {
-    value: new Date().toLocaleDateString(),
+    value: new Date().getTime()
   },
   reducers: {
     setSelectedDate: (state, action) => {
