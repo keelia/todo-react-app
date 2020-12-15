@@ -64,5 +64,3 @@ Builds the app for production to the `build` folder.<br />
 
 ## Mobile Screenshot
 <img src="./screenshots/mobile.png" style="height:300px"/>
-
-
